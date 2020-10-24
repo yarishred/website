@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'hamurz_free_versionregular';
   src: url('../fonts/hamurz_free_version-webfont.woff2') format('woff2'),
@@ -23,7 +22,7 @@ body::-webkit-scrollbar{
 
 #main-header {
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   position: relative;
   padding: 0.5px;
 }

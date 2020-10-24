@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enrolados</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/stylesheet.css" type="text/css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="./css/mobile.css">
+  </head>
+  <body>
     <header id="main-header">
-        <div class="main-wrapper"></div>
-        <nav class="main-nav">
-            	<ul>
-                    <li ><a class="nav-link" href="#">inicio </a></li>
-                    <li><a class="nav-link" href="#">nosotros</a></li>
-                    <li><a class="nav-link"  href="#">historia</a></li>
-                    <li><img class="enroladosLogo" src="./img/enrolados2Logo.png" alt="Logo Enrolados"></li>
-                    <li><a class="nav-link" href="#">productos</a></li>
-                    <li><a class="nav-link" href="#">domicilios</a></li>
-                    <li><a class="nav-link" href="#">contactanos</a></li>
-                </ul>
-        </nav>
-        <div class="overlay1"></div>
-        <div class="overlay2"></div>
-        <div class="overlay-bar"></div>
+      <div class="wrapper-hamburger">
+        <div class="hamburger">
+          <input type="checkbox" class="menu" name="menuhamb" id="menuhamb" />
+          <label for="menuhamb"></label>
+        </div>
+      </div>
+      <div class="main-wrapper"></div>
+      <nav class="main-nav">
+        <ul>
+          <li><a class="nav-link" href="#">inicio </a></li>
+          <li><a class="nav-link" href="#">nosotros</a></li>
+          <li><a class="nav-link" href="#">historia</a></li>
+          <li>
+            <img
+              class="enroladosLogo"
+              src="./img/enrolados2Logo.png"
+              alt="Logo Enrolados"
+            />
+          </li>
+          <li><a class="nav-link" href="#">productos</a></li>
+          <li><a class="nav-link" href="#">domicilios</a></li>
+          <li><a class="nav-link" href="#">contactanos</a></li>
+        </ul>
+      </nav>
+      <div class="overlay1"></div>
+      <div class="overlay2"></div>
+      <div class="overlay-bar"></div>
     </header>
     <section class="image-carousel">
-        <div class="carousel">
-            <h1>Espacio para imagenes</h1>
-        </div>
+      <div class="carousel">
+        <h1>Espacio para imagenes</h1>
+      </div>
     </section>
     <script src="./js/main.js"></script>
-</body>
+  </body>
 </html>

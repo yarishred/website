@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "hamurz_free_versionregular";
+  src: url("../fonts/hamurz_free_version-webfont.woff2") format("woff2"),
+    url("../fonts/hamurz_free_version-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #333;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.main-nav{
+}
+
+/* Nav Bar */
+.main-nav ul li a {
+  display: none;
+}
+
+.enroladosLogo {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  opacity: 0;
+  width: 12rem;
+  height: 12rem;
+  z-index: 15;
+}
+
+.logoTransition {
+  transition: all 1s ease-in-out;
+  transform: scale(1);
+  margin: auto;
+  opacity: 1;
+}
+
+/* Hambuger Menu */
+
+.wrapper-hamburger {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top:3rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-hamburger .menu {
+  display: block;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  background: white;
+  z-index: 80;
+}
+
+label {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 0;
+  top: 13px;
+  background-color: #440e38;
+  transition: all ease-in-out 0.2s;
+  z-index: 80;
+}
+
+label::after {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 0;
+  content: "";
+  top: -8px;
+  background-color: #440e38;
+  transition: all ease-in-out 0.2s;
+  z-index: 80;
+}
+
+label::before {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  left: 0;
+  content: "";
+  top: 8px;
+  background-color: #440e38;
+  transition: all ease-in-out 0.2s;
+  z-index: 80;
+}
+
+.menu:checked ~ label::after {
+  transform: rotate(45deg) translateY(5px) translateX(5px);
+}
+.menu:checked ~ label::before {
+  transform: rotate(-45deg) translateY(-6px) translateX(6px);
+}
+.menu:checked ~ label {
+  background-color: transparent;
+}
