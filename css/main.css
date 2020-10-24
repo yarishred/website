@@ -1,0 +1,161 @@
+
+@font-face {
+  font-family: 'hamurz_free_versionregular';
+  src: url('../fonts/hamurz_free_version-webfont.woff2') format('woff2'),
+       url('../fonts/hamurz_free_version-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar{
+  width: 0;
+}
+
+#main-header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0.5px;
+}
+#main-header .main-wrapper {
+  width: 10rem;
+  height: 10rem;
+  background-color: #333;
+  position: absolute;
+  top: 0.55rem;
+  left: 50%;
+  transform: translate(-50%);
+  margin: auto;
+}
+#main-header .main-wrapper {
+  width: 10rem;
+  height: 10rem;
+  background-color: transparent;
+  position: absolute;
+  top: 0.55rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav{
+  position: absolute;
+  top:-10px;
+  left:0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  z-index: 70;
+}
+
+.main-nav ul {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav ul li {
+  list-style: none;
+  padding:1rem 1.5rem;
+}
+
+.main-nav ul li .nav-link{
+  text-decoration: none;
+  font-family: 'hamurz_free_versionregular';
+  font-size: 1.8rem;
+  opacity: 0;
+}
+
+.nav-link:hover{
+  transition: all 0.3s ease-out;
+  color: #F9E6CB;
+  text-shadow: 2px 2px 1px #440e38;
+}
+
+.enroladosLogo {
+  display: block;
+  opacity: 0;
+  margin: 0 auto;
+  width: 20rem;
+  height: 20rem;
+  z-index: 15;
+  transform: scale(1.6);
+}
+
+.logoTransition {
+  transition: all 1s ease-in-out;
+  transform: scale(1);
+  margin: -4.5rem auto;
+  opacity: 1;
+}
+
+.overlay1,
+.overlay2 {
+  position: absolute;
+  width: 0%;
+  height: inherit;
+  transition: all 2s ease;
+}
+
+.overlay1 {
+  top: 0;
+  left: 0;
+  background-color: #eebd06;
+  z-index: -1;
+}
+.overlay2 {
+  top: 0;
+  right: 0;
+  background-color: #ff5736;
+  z-index: -1;
+}
+.overlay-bar {
+  margin: 0 auto;
+  background-color: #440e38;
+  width: 10px;
+  height: 0vh;
+  z-index: 10;
+  transition-delay: 0.2s;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+
+/* Section Image Carousel */
+
+.image-carousel{
+  opacity: 0;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 300vh;
+  background: linear-gradient( 180deg, transparent 0, #F9E6CB 25%);
+  transition: all 0.8s ease-in-out;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  background-color: transparent;
+  border: 8px solid #333;
+  top:25vh;
+  height: 60vh;
+}
