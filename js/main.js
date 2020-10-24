@@ -5,6 +5,7 @@ const overlays = {
   overlayBar: document.querySelector(".overlay-bar"),
   logo: document.querySelector(".enroladosLogo"),
   menuLink: document.querySelectorAll('.nav-link'),
+  hambMenu: document.querySelector('label'),
   imageCarousel: document.querySelector('.image-carousel')
 };
 
@@ -15,7 +16,8 @@ const {
   overlayBar, 
   logo,
   menuLink,
-  imageCarousel  
+  imageCarousel,
+  hambMenu
 } = overlays;
 
 // Events
@@ -33,6 +35,7 @@ window.addEventListener("load", () => {
   }, 3500);
   setTimeout(() => {
     logo.classList.add("logoTransition");
+    hambMenu.style.opacity = '1'
     menuLink.forEach(menu => menu.style.opacity = '1')
   }, 5000);
   setTimeout(() => {
