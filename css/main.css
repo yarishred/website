@@ -79,6 +79,7 @@ body::-webkit-scrollbar{
   font-family: 'hamurz_free_versionregular';
   font-size: 1.8rem;
   opacity: 0;
+  text-shadow: 2px 2px 1px #440e38;
 }
 
 .nav-link:hover{
