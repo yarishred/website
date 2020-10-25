@@ -173,7 +173,7 @@ body::-webkit-scrollbar {
 }
 
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:800px){
 
   
   /* Nav Bar */
@@ -345,4 +345,45 @@ body::-webkit-scrollbar {
     background-color: transparent;
   }
   
+}
+
+@media  (min-width: 801px) and (max-width: 1300px){
+  .main-nav ul li .nav-link {
+    text-decoration: none;
+    font-family: "hamurz_free_versionregular";
+    font-size: 1.1rem;
+    color: #440e38;
+    opacity: 0;
+  }
+
+  .main-nav ul li {
+    padding: 1rem 1rem;
+  }
+
+  .link1, .link2, .link3, .link5,.link6, .link7 {
+    margin-left:2rem;
+  }
+
+  .main-nav ul {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.enroladosLogo {
+  display: block;
+  opacity: 0;
+  margin: 0 auto;
+  width: 8rem;
+  height: 8rem;
+  z-index: 15;
+  transform: scale(1.6);
+}
+
+.logoTransition {
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  margin-left: 3rem;
+}
+
 }
