@@ -4,10 +4,18 @@ const overlays = {
   overlay2: document.querySelector(".overlay2"),
   overlayBar: document.querySelector(".overlay-bar"),
   logo: document.querySelector(".enroladosLogo"),
+  logoMobile: document.querySelector(".logoPpal"),
   menuLink: document.querySelectorAll('.nav-link'),
   hambMenu: document.querySelector('label'),
   imageCarousel: document.querySelector('.image-carousel')
 };
+const menuHamb = document.getElementById("menuhamb")
+const body = document.body;
+const overlay = document.querySelector(".overlay");
+const navigationOverlay = document.querySelectorAll("ul");
+
+// Boolean Variable
+let switchOverlay = false;
 
 // Destructuring
 const { 
@@ -15,10 +23,32 @@ const {
   overlay2, 
   overlayBar, 
   logo,
+  logoMobile,
   menuLink,
   imageCarousel,
   hambMenu
 } = overlays;
+
+// Functions
+const showAndHideMenu = () =>{
+  if (switchOverlay === false) {
+    switchOverlay = true;
+    overlay.classList.add("overlayScale");
+    navigationOverlay.forEach((navLink)=>{
+      navLink.style.opacity = '1'
+    })
+    body.style.overflowY = "hidden";
+    console.log(overlay)
+  } else {
+    // Close the overlay menu
+    switchOverlay = false;
+    overlay.classList.remove("overlayScale");
+    navigationOverlay.forEach((navLink)=>{
+      navLink.style.opacity = '0'
+    })
+    body.style.overflowY = "unset";
+  }
+}
 
 // Events
 window.addEventListener("load", () => {
@@ -35,6 +65,7 @@ window.addEventListener("load", () => {
   }, 3500);
   setTimeout(() => {
     logo.classList.add("logoTransition");
+    logoMobile.style.opacity = '1'
     hambMenu.style.opacity = '1'
     menuLink.forEach(menu => menu.style.opacity = '1')
   }, 5000);
@@ -42,3 +73,4 @@ window.addEventListener("load", () => {
     imageCarousel.style.opacity = '1'
   }, 5800);
 });
+menuHamb.addEventListener("click", showAndHideMenu);

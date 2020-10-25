@@ -7,13 +7,37 @@
 </head>
 
 <style>
-    .image {
-        width: 50%;
-        height: 50vh;
-        background-image: url(./img/enrolados2Logo.png), linear-gradient( 180deg, #f3b4cc 0, #f5ccc5 25%, #f7e3bf 52%, #a7dcba 79%, #68ccb1 100% );
-    }
+    ul {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+ul li {
+    	padding:30px
+}
+
+.link4{
+    order:1
+}
+.link2{
+    order:3
+}
+.link3{
+    order:4
+}
+.link1{
+    order:2
+}
+
+
 </style>
 <body>
-    <div class="image"></div>
+    <ul class="flex-container">
+        <li class="link1" >1</li>
+        <li class="link2" >2</li>
+        <li class="link3">3</li>
+        <li class="link4">4</li>
+    </ul>
 </body>
 </html>
