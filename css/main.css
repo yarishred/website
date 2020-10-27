@@ -11,16 +11,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color:#242424;
 }
+
+
 
 body::-webkit-scrollbar {
   width: 0;
 }
 
-.logo{
+/* Basic Text Styling */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 4rem
+}
+
+.logo {
   display: none;
 }
 
@@ -81,7 +94,6 @@ body::-webkit-scrollbar {
 .main-nav ul li {
   list-style: none;
   padding: 1rem 1.5rem;
-  
 }
 
 .main-nav ul li .nav-link {
@@ -91,7 +103,6 @@ body::-webkit-scrollbar {
   color: #440e38;
   opacity: 0;
 }
-
 
 .main-nav ul li .nav-link:hover {
   transition: all 0.3s ease-out;
@@ -148,105 +159,183 @@ body::-webkit-scrollbar {
   transition-timing-function: ease;
 }
 
-/* Section Image Carousel */
-
-.image-carousel {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300vh;
-  background: linear-gradient(180deg, transparent 0, #f9e6cb 25%);
-  transition: all 0.8s ease-in-out;
+.carousel-container {
+  max-width: 2000px;
+  height: 60vh!important;
+  overflow: hidden;
+  position: relative;
+  top: 2rem;
+  box-shadow: 2px 2px 20px #242424
 }
 
-.carousel {
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  background-color: #ff5736;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+img {
+  width: 100%;
+  height: 90vh;
+  background: no-repeat center center/cover;
+}
+
+#prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  color: #242424;
+  cursor: pointer;
+  text-shadow: 2px 2px 2px #f3f3f3;
+}
+
+#next-btn {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  color:  #242424;
+  cursor: pointer;
+  text-shadow: -2px -2px 2px #f3f3f3;
+}
+
+#productos {
+  max-width: 1400px;
+  height: 100vh;
+  top: 0rem;
+  margin: auto;
+  position: relative;
+
+}
+.main-text {
   position: absolute;
   width: 100%;
-  height: 40vh;
-  background-color: transparent;
-  border: 8px solid #333;
-  top: 25vh;
-  height: 60vh;
-  opacity: 0;
+  height: 30rem;
+}
+
+.main-text h1:first-child {
+  text-align: left;
+  font-size: 4rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bolder;
+  line-height: 4rem;
+}
+
+.main-text h1:last-child{
+  text-align: left;
+  font-size: 4.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  top:1rem;
+  right: 0%;
+  color: #eebd06;
+  background-color: #242424;
+}
+
+.product-container{
+  max-width: 1400px;
+  height: 100rem;
+  position: relative;
+  top: 20%;
+  padding: 4rem;
+}
+
+.product-container .product{
+  width: 45%;
+  height: 55vh;
+  position: absolute;
+  box-shadow: 1px 1px 10px rgb(38, 37, 37);
+
+}
+
+.product-item1{
+  left:5%;
+  background: url('../img/producto\ \(1\).jpg') no-repeat center center/cover;
+}
+.product-item2{
+  right: 3%;
+  top: 25%;
+  background: url('../img/producto\ \(2\).jpg') no-repeat center center/cover;
+
+}
+.product-item3{
+  left: 5%;
+  top: 50%;
+  background: url('../img/producto\ \(3\).jpg') no-repeat center center/cover;
+
 }
 
 
-@media only screen and (max-width:800px){
-
-  
+@media only screen and (max-width: 800px) {
   /* Nav Bar */
   .main-nav {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-  
   }
-  
+
   .main-nav ul {
     display: inline-flex;
     flex-direction: column;
     opacity: 0;
   }
-  
+
   .link1 {
-    order:1;
+    order: 1;
   }
   .link2 {
-    order:2;
+    order: 2;
   }
   .link3 {
-    order:3;
+    order: 3;
   }
   .link4 {
     display: none;
-    order:4;
+    order: 4;
   }
   .link5 {
-    order:5;
+    order: 5;
   }
   .link6 {
-    order:6;
+    order: 6;
   }
   .link7 {
-    order:7;
+    order: 7;
   }
-  
-  
-  .main-nav ul li  .nav-link:hover{
+
+  .main-nav ul li .nav-link:hover {
     transition: all 0.3s ease-out;
-    color: #F9E6CB;
+    color: #f9e6cb;
     text-shadow: 2px 2px 1px #440e38;
   }
   .logo {
-    display:block;
+    display: block;
     width: 15rem;
     height: 15rem;
   }
-  
-  .logoPpal{
+
+  .logoPpal {
     width: 15rem;
     height: 15rem;
     position: absolute;
-    top:-3rem;
+    top: -3rem;
     left: -1rem;
     z-index: 82;
     opacity: 0;
     transition: all 0.5s ease;
   }
-  
+
   .logoTransition {
     transition: all 1s ease-in-out;
     transform: scale(1);
     margin: -4.5rem auto;
     opacity: 1;
   }
-  
+
   /* Overlay Menu */
   .overlay {
     position: fixed;
@@ -264,7 +353,7 @@ body::-webkit-scrollbar {
     z-index: 60;
     overflow-y: hidden;
   }
-  
+
   .overlayScale {
     opacity: 1;
     transform: scale(45);
@@ -272,12 +361,11 @@ body::-webkit-scrollbar {
   }
 
   .overlay-bar {
-      margin-top: -15rem;
-
+    margin-top: -15rem;
   }
-  
+
   /* Hambuger Menu */
-  
+
   .wrapper-hamburger {
     width: 40px;
     height: 40px;
@@ -288,7 +376,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
   }
-  
+
   .wrapper-hamburger .menu {
     display: block;
     opacity: 0;
@@ -298,7 +386,7 @@ body::-webkit-scrollbar {
     background: white;
     z-index: 80;
   }
-  
+
   label {
     position: absolute;
     width: 30px;
@@ -310,7 +398,7 @@ body::-webkit-scrollbar {
     z-index: 80;
     opacity: 0;
   }
-  
+
   label::after {
     position: absolute;
     width: 30px;
@@ -322,7 +410,7 @@ body::-webkit-scrollbar {
     transition: all ease-in-out 0.2s;
     z-index: 80;
   }
-  
+
   label::before {
     position: absolute;
     width: 30px;
@@ -334,7 +422,7 @@ body::-webkit-scrollbar {
     transition: all ease-in-out 0.2s;
     z-index: 80;
   }
-  
+
   .menu:checked ~ label::after {
     transform: rotate(45deg) translateY(5px) translateX(5px);
   }
@@ -344,10 +432,18 @@ body::-webkit-scrollbar {
   .menu:checked ~ label {
     background-color: transparent;
   }
-  
 }
 
-@media  (min-width: 801px) and (max-width: 1300px){
+.carousel-container {
+  height: 45vh;
+  margin: 3rem auto;
+}
+
+.carousel-slide {
+  height: 45vh;
+}
+
+@media (min-width: 801px) and (max-width: 1400px) {
   .main-nav ul li .nav-link {
     text-decoration: none;
     font-family: "hamurz_free_versionregular";
@@ -360,8 +456,13 @@ body::-webkit-scrollbar {
     padding: 1rem 1rem;
   }
 
-  .link1, .link2, .link3, .link5,.link6, .link7 {
-    margin-left:2rem;
+  .link1,
+  .link2,
+  .link3,
+  .link5,
+  .link6,
+  .link7 {
+    margin-left: 2rem;
   }
 
   .main-nav ul {
@@ -369,21 +470,20 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     align-items: center;
   }
-  
-.enroladosLogo {
-  display: block;
-  opacity: 0;
-  margin: 0 auto;
-  width: 8rem;
-  height: 8rem;
-  z-index: 15;
-  transform: scale(1.6);
-}
 
-.logoTransition {
-  transition: all 1s ease-in-out;
-  opacity: 1;
-  margin-left: 3rem;
-}
+  .enroladosLogo {
+    display: block;
+    opacity: 0;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+    z-index: 15;
+    transform: scale(1.6);
+  }
 
+  .logoTransition {
+    transition: all 1s ease-in-out;
+    opacity: 1;
+    margin-left: 3rem;
+  }
 }

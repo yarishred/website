@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enrolados</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
     <link rel="stylesheet" href="./css/main.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;900&display=swap" rel="stylesheet">
+    </head>
   <body>
     <header id="main-header">
       <!-- Only for Mobile -->
@@ -26,7 +31,7 @@
       <!-- For Desktop -->
       <div class="main-wrapper"></div>
       <nav class="main-nav">
-        <ul>
+        <ul> 
           <li><a class="nav-link link1" href="#Inicio">inicio </a></li>
           <li><a class="nav-link link2" href="#Nosotros">nosotros</a></li>
           <li><a class="nav-link link3" href="#Historia">historia</a></li>
@@ -37,7 +42,7 @@
               alt="Logo Enrolados"
             />
           </li>
-          <li><a class="nav-link link5" href="#Productos">productos</a></li>
+          <li><a class="nav-link link5" href="#productos">productos</a></li>
           <li><a class="nav-link link6" href="#Domicilios">domicilios</a></li>
           <li><a class="nav-link link7" href="#Contactanos">contactanos</a></li>
         </ul>
@@ -46,11 +51,41 @@
       <div class="overlay2"></div>
       <div class="overlay-bar"></div>
     </header>
-    <section class="image-carousel">
-      <div class="carousel">
-        <h1>Espacio para imagenes</h1>
+    <section class="carousel-container">
+      <div class="carousel-slide">
+        <img src="./img/carousel5.jpg" id="lastClone" alt="">
+        <img src="./img/carousel1.jpg" alt="">
+        <img src="./img/carousel2.jpg" alt="">
+        <img src="./img/carousel3.jpg" alt="">
+        <img src="./img/carousel4.jpg" alt="">
+        <img src="./img/carousel5.jpg" alt="">
+        <img src="./img/carousel1.jpg" id='firstClone' alt="">
+      </div>
+      <i class="fas fa-chevron-left fa-3x" id="prev-btn"></i>
+      <i class="fas fa-chevron-right fa-3x" id="next-btn"></i></i>
+      <div id="productos-scroll"></div>
+    </section>
+    <section id="productos">
+      <div class="main-text">
+        <h1>ENROLATE<br>CON NUESTRO<br> MENU</h1>
+        <h1>PRODUCTOS</h1>
+      </div>
+      <div class="product-container">
+        <div class="product product-item1"></div>
+        <div class="product product-item2"></div>
+        <div class="product product-item3"></div>
       </div>
     </section>
+    <!-- <section class="domicilios">
+      <div class="main-text">
+        <h1>ENROLATE<br>CON NUESTRO<br> MENU</h1>
+        <h1>PRODUCTOS</h1>
+      </div>
+      <div class="product-container">
+        <div class="product product-item"></div>
+        <div class="product product-item"></div>
+        <div class="product product-item"></div>
+      </div> -->
     <script src="./js/main.js"></script>
   </body>
 </html>
